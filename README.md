@@ -7,4 +7,4 @@ Works for mobile, but is obviously unoptimized for these platforms, meaning ther
 
 ## This app connects to a Python backend. In my case, the API I made is hosted at Heroku, <a href="https://hub-stream.herokuapp.com/api">here</a>.
 
-## THIS APP WAS MADE FOR PERSONAL USE, HAS MANY THINGS THAT NEED IMPROVEMENT, REDUNDANT CODE, ETC. ALTHOUGH I KNOW EXACTLY   WHAT SHOULD BE FIXED/IMPROVED, I DON'T INTEND TO UPDATE THIS IN THE NEAR FUTURE.
+### THIS APP WAS MADE FOR PERSONAL USE, HAS MANY THINGS THAT NEED IMPROVEMENT, REDUNDANT CODE, ETC. ALTHOUGH I KNOW EXACTLY   WHAT SHOULD BE FIXED/IMPROVED, I DON'T INTEND TO UPDATE THIS IN THE NEAR FUTURE.
