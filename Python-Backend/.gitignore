@@ -1,0 +1,6 @@
+local_app.py
+chromedriver.exe
+chromedriver
+check.py
+.vscode
+__pycache__

@@ -73,6 +73,7 @@ class Scraper:
                     "p", {"class": "card-content-text"}).text
 
                 self.driver.get(inside_link)
+                self.driver.refresh()
 
                 try:
                     # time.sleep(delay)
@@ -94,19 +95,19 @@ class Scraper:
                 for stream_results in inside_streams:
                     labels = []
 
-                    for stream_data in stream_results.find_all("td")[:-2]:
-                        labels.append(stream_data.text)
+                    for stream_data in stream_results.find_all("td"):
+                        labels.append(stream_data)
 
-                    name = labels[0]
-                    resolution = labels[1]
-                    framerate = labels[2]
-                    bitrate = labels[3]
-                    language = labels[4]
-                    coverage = labels[5]
-                    compatibility = labels[6]
-                    ads = labels[7]
-                    comments = labels[8]
-                    url = stream_results.find_all("td")[9].find("a")["href"]
+                    name = labels[0].text
+                    resolution = labels[1].text
+                    framerate = labels[2].text
+                    bitrate = labels[3].text
+                    language = labels[4].text
+                    coverage = labels[5].text
+                    compatibility = labels[6].text
+                    ads = labels[7].text
+                    comments = labels[8].text
+                    url = labels[9].find("a")["href"]
 
                     streamData.append(
                         {
@@ -149,21 +150,22 @@ class Scraper:
             inside_streams = page.find_all("tr", {"class": "stream-row"})
 
             for stream_results in inside_streams:
+                
                 labels = []
 
-                for stream_data in stream_results.find_all("td")[:-2]:
-                    labels.append(stream_data.text)
+                for stream_data in stream_results.find_all("td"):
+                    labels.append(stream_data)
 
-                name = labels[0]
-                resolution = labels[1]
-                framerate = labels[2]
-                bitrate = labels[3]
-                language = labels[4]
-                coverage = labels[5]
-                compatibility = labels[6]
-                ads = labels[7]
-                comments = labels[8]
-                url = stream_results.find_all("td")[9].find("a")["href"]
+                name = labels[0].text
+                resolution = labels[1].text
+                framerate = labels[2].text
+                bitrate = labels[3].text
+                language = labels[4].text
+                coverage = labels[5].text
+                compatibility = labels[6].text
+                ads = labels[7].text
+                comments = labels[8].text
+                url = labels[9].find("a")["href"]
 
                 streamData.append(
                     {
