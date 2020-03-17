@@ -85,7 +85,7 @@ class Scraper:
                 except Exception as e:
                     print(
                         f"Could not load streams within {self.delay} seconds. Error: {e}")
-                    return
+                    return []
 
                 page = self.driver.page_source
                 page = BeautifulSoup(page, 'lxml')
@@ -141,7 +141,7 @@ class Scraper:
             except Exception as e:
                 print(
                     f"Could not load streams within {self.delay} seconds. Error: {e}")
-                return
+                return []
 
             teams = page.select_one('#app > div > main > div > h1').text.replace(
                 "Available links for", "")
