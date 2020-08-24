@@ -1,5 +1,3 @@
-# Streams App
-
 ## This app connects to a Python backend. In my case, the API I made is hosted at Heroku, <a href="https://hub-stream.herokuapp.com/api">here</a>.
 
 Simple Flutter app connected to a Python backend, which scrapes some streaming websites and returns results which are then displayed in the app.
